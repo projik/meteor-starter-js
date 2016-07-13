@@ -12,7 +12,6 @@ Package.onUse(function(api) {
 
   api.use(
   	[
-  		'coffeescript',
   		'less@2.5.1',
       'templating',
 	    'aldeed:autoform@4.1.0 || 5.1.2'
@@ -21,23 +20,23 @@ Package.onUse(function(api) {
 
   api.addFiles(
   	[
-  		'lib/both/collections.coffee'
+  		'lib/both/collections.js'
   	],
   	both)
 
    api.addFiles(
   	[
   		'lib/client/templates.html',
-      'lib/client/templates.coffee',
-      'lib/client/helpers.coffee',
-  		'lib/client/autoform.coffee'
+      'lib/client/templates.js',
+      'lib/client/helpers.js',
+  		'lib/client/autoform.js'
   	],
   	'client')
 
    api.addFiles(
   	[
-  		'lib/server/allow.coffee',
-  		'lib/server/publish.coffee'
+  		'lib/server/allow.js',
+  		'lib/server/publish.js'
   	],
   	'server')
 
