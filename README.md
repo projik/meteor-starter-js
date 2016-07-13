@@ -1,13 +1,13 @@
 Meteor Starter
 ==============
 
-A Meteor boilerplate with a lot packed in. Written in Coffeescript.
+
 ### Warning ####
 Warning: This Fork Decaffeinated with https://github.com/rainforestapp/decaf , this is why there is no coffee files.
 I am using only js(after es6 released), totally personal choice.
 If you more comfortable with coffeescript please go to original repo at https://github.com/yogiben/meteor-starter
 
-
+A Meteor boilerplate with a lot packed in. Written in ~~Coffeescript~~ JS.
 
 [Tutorials](http://learn.meteorfactory.io/meteor-starter/)
 
@@ -52,11 +52,11 @@ meteor
 Detailed tutorails coming soon.
 
 First steps:
-* Edit basic setting in `/lib/_config/_config.coffee`
+* Edit basic setting in `/lib/_config/_config.~~coffee~~js`
 * Delete / modify HTML in `/client/views/home.html`
 * Update colors in `/client/style/bootstrap-variables.less`
 * Add / edit collections in `/collections/`
-* Create routes and views in `/lib/router/router.coffee` and `/client/views` folder
+* Create routes and views in `/lib/router/router.~~coffee~~js` and `/client/views` folder
 
 ### Docker ###
 Dockerize it
