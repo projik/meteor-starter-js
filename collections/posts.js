@@ -8,9 +8,18 @@ Schemas.Posts = new SimpleSchema({
 
   content: {
     type: String,
-
+    autoValue: function() {
+      if (Meteor.isServer) {
+    	   return sanitizeHtml( this.value );
+    	} else {
+        return this.value;
+    	}
+    },
     autoform: {
-      rows: 5
+      afFieldInput: {
+        type: "summernote",
+        class: "editor"
+      }
     }
   },
 

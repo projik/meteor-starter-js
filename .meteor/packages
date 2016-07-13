@@ -71,3 +71,5 @@ check
 standard-minifier-css
 standard-minifier-js
 yogiben:autoform-file
+mpowaga:autoform-summernote
+djedi:sanitize-html
