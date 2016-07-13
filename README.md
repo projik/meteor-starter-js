@@ -13,7 +13,7 @@ A Meteor boilerplate with a lot packed in. Written in ~~Coffeescript~~ JS.
 
 [MIT License](http://choosealicense.com/licenses/mit/)
 
-Maintained by [Meteor Factory](https://meteorfactory.io). Professional Meteor development.
+~~Maintained~~ Created by [Meteor Factory](https://meteorfactory.io). Professional Meteor development.
 
 [![Meteor starter](https://raw.githubusercontent.com/yogiben/meteor-starter/master/readme/meteor-factory.jpg)](http://meteorfactory.io)
 
@@ -52,11 +52,11 @@ meteor
 Detailed tutorails coming soon.
 
 First steps:
-* Edit basic setting in `/lib/_config/_config.~~coffee~~js`
+* Edit basic setting in `/lib/_config/_config.js`
 * Delete / modify HTML in `/client/views/home.html`
 * Update colors in `/client/style/bootstrap-variables.less`
 * Add / edit collections in `/collections/`
-* Create routes and views in `/lib/router/router.~~coffee~~js` and `/client/views` folder
+* Create routes and views in `/lib/router/router.js` and `/client/views` folder
 
 ### Docker ###
 Dockerize it
