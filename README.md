@@ -2,6 +2,12 @@ Meteor Starter
 ==============
 
 A Meteor boilerplate with a lot packed in. Written in Coffeescript.
+### Warning ####
+Warning: This Fork Decaffeinated with https://github.com/rainforestapp/decaf , this is why there is no coffee files.
+I am using only js(after es6 released), totally personal choice.
+If you more comfortable with coffeescript please go to original repo at https://github.com/yogiben/meteor-starter
+
+
 
 [Tutorials](http://learn.meteorfactory.io/meteor-starter/)
 
@@ -17,7 +23,7 @@ Maintained by [Meteor Factory](https://meteorfactory.io). Professional Meteor de
 * with coffee script *
 git clone https://github.com/yogiben/meteor-starter.git myapp 
 
-*for decaf version*
+* for decaf version *
 git clone https://github.com/sabitertan/meteor-starter.git myapp
 
 cd myapp
