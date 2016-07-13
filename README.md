@@ -14,7 +14,12 @@ Maintained by [Meteor Factory](https://meteorfactory.io). Professional Meteor de
 ### Setup ####
 
 ```
-git clone https://github.com/yogiben/meteor-starter.git myapp
+* with coffee script *
+git clone https://github.com/yogiben/meteor-starter.git myapp 
+
+*for decaf version*
+git clone https://github.com/sabitertan/meteor-starter.git myapp
+
 cd myapp
 meteor
 ```
