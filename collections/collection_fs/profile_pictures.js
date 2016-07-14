@@ -1,14 +1,15 @@
 this.ProfilePictures = new FS.Collection('profilePictures', {
   stores: [new FS.Store.GridFS('images', {
-    transformWrite: function (fileObj, readStream, writeStream) {
+    transformWrite: function(fileObj, readStream, writeStream) {
       if (gm.isAvailable) {
-        return gm(readStream, fileObj.name()).autoOrient().stream().pipe(writeStream);
+        return gm(readStream, fileObj.name())
+        .autoOrient().stream().pipe(writeStream);
       } else {
         return readStream.pipe(writeStream);
       }
     }
   }), new FS.Store.GridFS('thumbs', {
-    transformWrite: function (fileObj, readStream, writeStream) {
+    transformWrite: function(fileObj, readStream, writeStream) {
       var size;
 
       if (gm.isAvailable) {

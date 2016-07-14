@@ -1,4 +1,4 @@
-Template.registerHelper('CommentsByDoc', function (_id) {
+Template.registerHelper('CommentsByDoc', function(_id) {
   if (typeof window.Comments !== 'undefined') {
     return Comments.find({
       doc: _id
@@ -10,7 +10,7 @@ Template.registerHelper('CommentsByDoc', function (_id) {
   }
 });
 
-Template.registerHelper('CommentsByUser', function (_id) {
+Template.registerHelper('CommentsByUser', function(_id) {
   if (typeof window.Comments !== 'undefined') {
     return Comments.find({
       owner: _id
@@ -22,7 +22,7 @@ Template.registerHelper('CommentsByUser', function (_id) {
   }
 });
 
-Template.registerHelper('CommentsByCollection', function (collection) {
+Template.registerHelper('CommentsByCollection', function(collection) {
   var comments;
   var Comments;
 
@@ -39,7 +39,7 @@ Template.registerHelper('CommentsByCollection', function (collection) {
 
     collection = window[collection];
 
-    _.each(comments, function (favorite) {
+    _.each(comments, function(favorite) {
       if (collection.findOne({
         _id: favorite.doc
       })) {
@@ -53,7 +53,7 @@ Template.registerHelper('CommentsByCollection', function (collection) {
   }
 });
 
-Template.registerHelper('commentCount', function (_id) {
+Template.registerHelper('commentCount', function(_id) {
   if (typeof window.Comments !== 'undefined') {
     return Comments.find({
       doc: _id
@@ -61,6 +61,6 @@ Template.registerHelper('commentCount', function (_id) {
   }
 });
 
-Template.registerHelper('commentingOn', function (_id) {
+Template.registerHelper('commentingOn', function(_id) {
   return Session.equals('commentingOn', _id);
 });

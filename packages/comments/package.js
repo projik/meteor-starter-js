@@ -7,7 +7,7 @@ Package.describe({
 
 both = ['client', 'server'];
 
-Package.onUse(function (api) {
+Package.onUse(function(api) {
   api.versionsFrom('METEOR@1.0.3');
 
   api.use(

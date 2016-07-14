@@ -4,8 +4,7 @@ Package.describe({
   git: 'https://github.com/yogiben/meteor-bootstrap'
 });
 
-
-Package.on_use(function (api) {
+Package.on_use(function(api) {
   api.versionsFrom('METEOR@1.0.3');
   api.use('jquery', 'client');
   api.use('less@2.5.1', 'client');

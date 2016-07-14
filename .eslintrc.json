@@ -25,14 +25,10 @@
             "error",
             "always"
         ],
-        "no-undef": [
-            "off"
-        ],
-        "no-unused-vars": [
-            "warn"
-        ],
-        "no-console": [
-            "warn"
-        ]
+        "no-undef": "off",
+        "no-unused-vars": "warn",
+        "dot-notation": "error",
+        "no-console" : "warn",
+        "space-before-function-paren": ["error", "never"]
     }
 }

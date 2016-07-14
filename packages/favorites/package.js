@@ -37,9 +37,6 @@ Package.onUse(function(api) {
       'lib/server/publish.js'
     ],
     'server');
-
-
-
 });
 
 Package.onTest(function(api) {

@@ -8,7 +8,7 @@ Schemas.Posts = new SimpleSchema({
 
   content: {
     type: String,
-    autoValue: function () {
+    autoValue: function() {
       if (Meteor.isServer) {
         return sanitizeHtml(this.value);
       } else {
@@ -27,7 +27,7 @@ Schemas.Posts = new SimpleSchema({
   createdAt: {
     type: Date,
 
-    autoValue: function () {
+    autoValue: function() {
       if (this.isInsert) {
         return new Date();
       }
@@ -38,7 +38,7 @@ Schemas.Posts = new SimpleSchema({
     type: Date,
     optional: true,
 
-    autoValue: function () {
+    autoValue: function() {
       if (this.isUpdate) {
         return new Date();
       }
@@ -60,15 +60,15 @@ Schemas.Posts = new SimpleSchema({
     type: String,
     regEx: SimpleSchema.RegEx.Id,
 
-    autoValue: function () {
+    autoValue: function() {
       if (this.isInsert) {
         return Meteor.userId();
       }
     },
 
     autoform: {
-      options: function () {
-        return _.map(Meteor.users.find().fetch(), function (user) {
+      options: function() {
+        return _.map(Meteor.users.find().fetch(), function(user) {
           return {
             label: user.emails[0].address,
             value: user._id
@@ -82,7 +82,7 @@ Schemas.Posts = new SimpleSchema({
 Posts.attachSchema(Schemas.Posts);
 
 Posts.helpers({
-  author: function () {
+  author: function() {
     var ref;
     var ref2;
     var ref1;

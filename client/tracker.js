@@ -1,3 +1,3 @@
-Tracker.autorun(function () {
+Tracker.autorun(function() {
   return subs.subscribe('myFavorites');
 });

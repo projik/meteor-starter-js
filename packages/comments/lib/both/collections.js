@@ -11,8 +11,8 @@ var CommentsSchema = new SimpleSchema({
     regEx: SimpleSchema.RegEx.Id,
 
     autoform: {
-      options: function () {
-        return _.map(Meteor.users.find().fetch(), function (user) {
+      options: function() {
+        return _.map(Meteor.users.find().fetch(), function(user) {
           return {
             label: user.emails[0].address,
             value: user._id
@@ -25,7 +25,7 @@ var CommentsSchema = new SimpleSchema({
   createdAt: {
     type: Date,
 
-    autoValue: function () {
+    autoValue: function() {
       if (this.isInsert) {
         return new Date();
       }
