@@ -1,14 +1,14 @@
-this.ProfilePictures = new FS.Collection("profilePictures", {
-  stores: [new FS.Store.GridFS("images", {
-    transformWrite: function(fileObj, readStream, writeStream) {
+this.ProfilePictures = new FS.Collection('profilePictures', {
+  stores: [new FS.Store.GridFS('images', {
+    transformWrite: function (fileObj, readStream, writeStream) {
       if (gm.isAvailable) {
         return gm(readStream, fileObj.name()).autoOrient().stream().pipe(writeStream);
       } else {
         return readStream.pipe(writeStream);
       }
     }
-  }), new FS.Store.GridFS("thumbs", {
-    transformWrite: function(fileObj, readStream, writeStream) {
+  }), new FS.Store.GridFS('thumbs', {
+    transformWrite: function (fileObj, readStream, writeStream) {
       var size;
 
       if (gm.isAvailable) {
@@ -17,7 +17,9 @@ this.ProfilePictures = new FS.Collection("profilePictures", {
           height: 100
         };
 
-        return gm(readStream, fileObj.name()).autoOrient().resize(size.width + "^>", size.height + "^>").gravity("Center").extent(size.width, size.height).stream().pipe(writeStream);
+        return gm(readStream, fileObj.name()).autoOrient()
+        .resize(size.width + '^>', size.height + '^>').gravity('Center')
+        .extent(size.width, size.height).stream().pipe(writeStream);
       } else {
         return readStream.pipe(writeStream);
       }
@@ -26,7 +28,7 @@ this.ProfilePictures = new FS.Collection("profilePictures", {
 
   filter: {
     allow: {
-      contentTypes: ["image/*"]
+      contentTypes: ['image/*']
     }
   }
 });

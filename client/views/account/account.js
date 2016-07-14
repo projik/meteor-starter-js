@@ -2,17 +2,17 @@ AutoForm.hooks({
   updatePassword: {
     onSubmit: function(insertDoc, updateDoc, currentDoc) {
       if (insertDoc.new !== insertDoc.confirm) {
-        sAlert.error("Passwords do not match");
+        sAlert.error('Passwords do not match');
         return false;
       }
 
       Accounts.changePassword(insertDoc.old, insertDoc.new, function(e) {
-        $(".btn-primary").attr("disabled", null);
+        $('.btn-primary').attr('disabled', null);
 
         if (e) {
           return sAlert.error(e.message);
         } else {
-          return sAlert.success("Password Updated");
+          return sAlert.success('Password Updated');
         }
       });
 
@@ -22,8 +22,8 @@ AutoForm.hooks({
 });
 
 Template.account.events({
-  "click .js-delete-account": function() {
-    return Meteor.call("deleteAccount", Meteor.userId());
+  'click .js-delete-account': function() {
+    return Meteor.call('deleteAccount', Meteor.userId());
   }
 });
 

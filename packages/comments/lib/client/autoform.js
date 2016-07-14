@@ -8,6 +8,6 @@ AutoForm.hooks({
       doc.doc = Template.instance().data.commentDocId;
       doc.owner = Meteor.userId();
       return doc;
-    },
-  },
+    }
+  }
 });

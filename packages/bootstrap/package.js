@@ -1,12 +1,12 @@
 Package.describe({
-  summary: "Bootstrap 3 with easy-access variables.",
-  version: "0.3.1",
-  git: "https://github.com/yogiben/meteor-bootstrap",
+  summary: 'Bootstrap 3 with easy-access variables.',
+  version: '0.3.1',
+  git: 'https://github.com/yogiben/meteor-bootstrap'
 });
 
 
 Package.on_use(function (api) {
-  api.versionsFrom("METEOR@1.0.3");
+  api.versionsFrom('METEOR@1.0.3');
   api.use('jquery', 'client');
   api.use('less@2.5.1', 'client');
 

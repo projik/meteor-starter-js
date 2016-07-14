@@ -3,7 +3,7 @@ this.Schemas = {};
 Schemas.updatePassword = new SimpleSchema({
   old: {
     type: String,
-    label: "Current Password",
+    label: 'Current Password',
     max: 50
   },
 
@@ -11,13 +11,13 @@ Schemas.updatePassword = new SimpleSchema({
     type: String,
     min: 6,
     max: 20,
-    label: "New Password"
+    label: 'New Password'
   },
 
   confirm: {
     type: String,
     min: 6,
     max: 20,
-    label: "Confirm new Password"
+    label: 'Confirm new Password'
   }
 });

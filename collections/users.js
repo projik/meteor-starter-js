@@ -2,12 +2,12 @@ Schemas.UserProfile = new SimpleSchema({
   picture: {
     type: String,
     optional: true,
-    label: "Profile picture",
+    label: 'Profile picture',
 
     autoform: {
       afFieldInput: {
-        type: "fileUpload",
-        collection: "ProfilePictures"
+        type: 'fileUpload',
+        collection: 'ProfilePictures'
       }
     }
   },
@@ -41,7 +41,7 @@ Schemas.UserProfile = new SimpleSchema({
     optional: true,
 
     autoform: {
-      type: "map",
+      type: 'map',
       geolocation: true,
       searchBox: true,
       autolocate: true
@@ -50,7 +50,7 @@ Schemas.UserProfile = new SimpleSchema({
 
   country: {
     type: String,
-    label: "Nationality",
+    label: 'Nationality',
     allowedValues: Utils.countryList,
     optional: true
   }
@@ -68,12 +68,12 @@ Schemas.User = new SimpleSchema({
     optional: true
   },
 
-  "emails.$.address": {
+  'emails.$.address': {
     type: String,
     regEx: SimpleSchema.RegEx.Email
   },
 
-  "emails.$.verified": {
+  'emails.$.verified': {
     type: Boolean
   },
 

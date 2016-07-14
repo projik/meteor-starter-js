@@ -1,11 +1,11 @@
 Template.registerHelper('CommentsByDoc', function (_id) {
   if (typeof window.Comments !== 'undefined') {
     return Comments.find({
-      doc: _id,
+      doc: _id
     }, {
       sort: {
-        createdAt: -1,
-      },
+        createdAt: -1
+      }
     }).fetch();
   }
 });
@@ -13,11 +13,11 @@ Template.registerHelper('CommentsByDoc', function (_id) {
 Template.registerHelper('CommentsByUser', function (_id) {
   if (typeof window.Comments !== 'undefined') {
     return Comments.find({
-      owner: _id,
+      owner: _id
     }, {
       sort: {
-        createdAt: -1,
-      },
+        createdAt: -1
+      }
     }).fetch();
   }
 });
@@ -30,21 +30,21 @@ Template.registerHelper('CommentsByCollection', function (collection) {
     Comments = [];
 
     comments = window.Comments.find({
-      owner: Meteor.userId(),
+      owner: Meteor.userId()
     }, {
       sort: {
-        createdAt: -1,
-      },
+        createdAt: -1
+      }
     }).fetch();
 
     collection = window[collection];
 
     _.each(comments, function (favorite) {
       if (collection.findOne({
-        _id: favorite.doc,
+        _id: favorite.doc
       })) {
         return Comments.push(collection.findOne({
-          _id: favorite.doc,
+          _id: favorite.doc
         }));
       }
     });
@@ -56,7 +56,7 @@ Template.registerHelper('CommentsByCollection', function (collection) {
 Template.registerHelper('commentCount', function (_id) {
   if (typeof window.Comments !== 'undefined') {
     return Comments.find({
-      doc: _id,
+      doc: _id
     }).fetch().length;
   }
 });

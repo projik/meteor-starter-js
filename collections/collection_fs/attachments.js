@@ -10,6 +10,6 @@ this.Attachments = new FS.Collection('Attachments', {
       } else {
         return readStream.pipe(writeStream);
       }
-    },
+    }
   })]
 });

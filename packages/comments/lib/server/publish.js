@@ -4,12 +4,12 @@ Meteor.publish('comments', function () {
 
 Meteor.publish('commentsByDoc', function (_id) {
   return Comments.find({
-    doc: _id,
+    doc: _id
   });
 });
 
 Meteor.publish('commentsByUser', function (_id) {
   return Favorites.find({
-    owner: _id,
+    owner: _id
   });
 });

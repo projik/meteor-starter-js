@@ -5,7 +5,7 @@ Template.commentFormToggle.events({
 
   'click .btn-cancel-comment': function (e, t) {
     return Session.set('commentingOn', null);
-  },
+  }
 });
 
 Template.commentFormToggle.destroyed = function () {
@@ -16,6 +16,6 @@ AutoForm.hooks({
   commentForm: {
     onSuccess: function (operation, result, template) {
       return Session.set('commentingOn', null);
-    },
-  },
+    }
+  }
 });

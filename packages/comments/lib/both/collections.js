@@ -3,7 +3,7 @@ this.Comments = new Meteor.Collection('comments');
 var CommentsSchema = new SimpleSchema({
   doc: {
     type: String,
-    regEx: SimpleSchema.RegEx.Id,
+    regEx: SimpleSchema.RegEx.Id
   },
 
   owner: {
@@ -15,11 +15,11 @@ var CommentsSchema = new SimpleSchema({
         return _.map(Meteor.users.find().fetch(), function (user) {
           return {
             label: user.emails[0].address,
-            value: user._id,
+            value: user._id
           };
         });
-      },
-    },
+      }
+    }
   },
 
   createdAt: {
@@ -29,13 +29,13 @@ var CommentsSchema = new SimpleSchema({
       if (this.isInsert) {
         return new Date();
       }
-    },
+    }
   },
 
   content: {
     type: String,
-    label: 'Comment',
-  },
+    label: 'Comment'
+  }
 });
 
 Comments.attachSchema(CommentsSchema);

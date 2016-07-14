@@ -4,13 +4,13 @@ Template.home.rendered = function() {
   var winWidth = $(window).width();
   var winHeight = $(window).height();
 
-  $("#intro").css({
+  $('#intro').css({
     width: winWidth,
     height: winHeight
   });
 
   $(window).resize(function() {
-    return $("#intro").css({
+    return $('#intro').css({
       width: $(window).width(),
       height: $(window).height()
     });
@@ -27,5 +27,5 @@ Template.home.rendered = function() {
 };
 
 Template.home.destroyed = function() {
-  return $("body").attr("style", "");
+  return $('body').attr('style', '');
 };

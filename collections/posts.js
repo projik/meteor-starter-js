@@ -1,4 +1,4 @@
-this.Posts = new Meteor.Collection("posts");
+this.Posts = new Meteor.Collection('posts');
 
 Schemas.Posts = new SimpleSchema({
   title: {
@@ -8,17 +8,18 @@ Schemas.Posts = new SimpleSchema({
 
   content: {
     type: String,
-    autoValue: function() {
+    autoValue: function () {
       if (Meteor.isServer) {
-    	   return sanitizeHtml( this.value );
-    	} else {
+        return sanitizeHtml(this.value);
+      } else {
         return this.value;
-    	}
+      }
     },
+
     autoform: {
       afFieldInput: {
-        type: "summernote",
-        class: "editor"
+        type: 'summernote',
+        class: 'editor'
       }
     }
   },
@@ -26,7 +27,7 @@ Schemas.Posts = new SimpleSchema({
   createdAt: {
     type: Date,
 
-    autoValue: function() {
+    autoValue: function () {
       if (this.isInsert) {
         return new Date();
       }
@@ -37,7 +38,7 @@ Schemas.Posts = new SimpleSchema({
     type: Date,
     optional: true,
 
-    autoValue: function() {
+    autoValue: function () {
       if (this.isUpdate) {
         return new Date();
       }
@@ -49,8 +50,8 @@ Schemas.Posts = new SimpleSchema({
 
     autoform: {
       afFieldInput: {
-        type: "fileUpload",
-        collection: "Attachments"
+        type: 'fileUpload',
+        collection: 'Attachments'
       }
     }
   },
@@ -59,15 +60,15 @@ Schemas.Posts = new SimpleSchema({
     type: String,
     regEx: SimpleSchema.RegEx.Id,
 
-    autoValue: function() {
+    autoValue: function () {
       if (this.isInsert) {
         return Meteor.userId();
       }
     },
 
     autoform: {
-      options: function() {
-        return _.map(Meteor.users.find().fetch(), function(user) {
+      options: function () {
+        return _.map(Meteor.users.find().fetch(), function (user) {
           return {
             label: user.emails[0].address,
             value: user._id
@@ -81,16 +82,20 @@ Schemas.Posts = new SimpleSchema({
 Posts.attachSchema(Schemas.Posts);
 
 Posts.helpers({
-  author: function() {
+  author: function () {
     var ref;
     var ref2;
     var ref1;
     var user = Meteor.users.findOne(this.owner);
 
-    if (((user != null ? ((ref1 = user.profile) != null ? ref1.firstName : void 0) : void 0)) != null && ((user != null ? (ref2 = user.profile) != null ? ref2.lastName : void 0 : void 0))) {
-      return user.profile.firstName + " " + user.profile.lastName;
+    if (((user != null ? ((ref1 = user.profile) !=
+    null ? ref1.firstName : void 0) : void 0)) !=
+    null && ((user != null ? (ref2 = user.profile) !=
+    null ? ref2.lastName : void 0 : void 0))) {
+      return user.profile.firstName + ' ' + user.profile.lastName;
     } else {
-      return user != null ? ((ref = user.emails) != null ? ref[0].address : void 0) : void 0;
+      return user != null ? ((ref = user.emails) !=
+      null ? ref[0].address : void 0) : void 0;
     }
   }
 });

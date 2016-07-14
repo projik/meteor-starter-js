@@ -5,5 +5,5 @@ Template.navbar.events({
 
   'click .sliding-menu a': function () {
     return $('#sliding-menu-controller').prop('checked', false);
-  },
+  }
 });
