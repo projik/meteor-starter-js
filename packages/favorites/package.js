@@ -1,44 +1,42 @@
 Package.describe({
-  summary: "Adds favoriting/liking functionality to any collection",
-  version: "0.0.4",
-  git: "http://github.com/yogiben/meteor-favorites.git"
+  summary: 'Adds favoriting/liking functionality to any collection',
+  version: '0.0.4',
+  git: 'http://github.com/yogiben/meteor-favorites.git'
 });
 
-both = ['client','server']
+both = ['client','server'];
 
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@1.0.3');
 
   api.use(
-  	[
-  		'less@2.5.1',
+    [
+      'less@2.5.1',
       'templating',
-
-	    'aldeed:autoform@4.0.2 || 5.1.2'
-
-  	],
-  	both);
+      'aldeed:autoform@4.0.2 || 5.1.2'
+    ],
+    both);
 
   api.addFiles(
-  	[
-  		'lib/both/collections.js'
-  	],
-  	both)
+    [
+      'lib/both/collections.js'
+    ],
+    both);
 
-   api.addFiles(
-  	[
-  		'lib/client/templates.html',
+  api.addFiles(
+    [
+      'lib/client/templates.html',
       'lib/client/templates.js',
-  		'lib/client/helpers.js'
-  	],
-  	'client')
+      'lib/client/helpers.js'
+    ],
+    'client');
 
-   api.addFiles(
-  	[
-  		'lib/server/allow.js',
-  		'lib/server/publish.js'
-  	],
-  	'server')
+  api.addFiles(
+    [
+      'lib/server/allow.js',
+      'lib/server/publish.js'
+    ],
+    'server');
 
 
 

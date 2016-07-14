@@ -1,4 +1,4 @@
-this.Favorites = new Meteor.Collection("favorites");
+this.Favorites = new Meteor.Collection('favorites');
 
 var FavoritesSchemas = new SimpleSchema({
   doc: {

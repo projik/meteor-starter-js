@@ -1,7 +1,7 @@
-this.Notifications = new Meteor.Collection("notifications");
+this.Notifications = new Meteor.Collection('notifications');
 
 Notifications.new = function(doc) {
-  if (typeof doc.owner === "undefined") {
+  if (typeof doc.owner === 'undefined') {
     doc.owner = Meteor.userId();
   }
 
@@ -9,7 +9,7 @@ Notifications.new = function(doc) {
 };
 
 Notifications.readAll = function() {
-  return Meteor.call("readAllNotifications");
+  return Meteor.call('readAllNotifications');
 };
 
 Notifications.read = function(_id) {
@@ -52,12 +52,12 @@ var NotificationsSchema = new SimpleSchema({
 
   icon: {
     type: String,
-    defaultValue: "circle-o"
+    defaultValue: 'circle-o'
   },
 
   class: {
     type: String,
-    defaultValue: "default"
+    defaultValue: 'default'
   }
 });
 

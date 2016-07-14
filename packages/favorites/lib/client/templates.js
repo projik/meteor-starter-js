@@ -8,19 +8,19 @@ Template.favoriteButton.helpers({
 });
 
 Template.favoriteButtonNotFavorited.events({
-  "click .js-favorite-button": function(e, t) {
+  'click .js-favorite-button': function(e, t) {
     return Favorites.insert({
-      doc: $(e.currentTarget).attr("doc"),
+      doc: $(e.currentTarget).attr('doc'),
       owner: Meteor.userId()
     });
   }
 });
 
 Template.favoriteButtonFavorited.events({
-  "click .js-favorite-button": function(e, t) {
+  'click .js-favorite-button': function(e, t) {
     var favorite = Favorites.findOne({
       owner: Meteor.userId(),
-      doc: $(e.currentTarget).attr("doc")
+      doc: $(e.currentTarget).attr('doc')
     });
 
     return Favorites.remove({

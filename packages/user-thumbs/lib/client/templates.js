@@ -1,6 +1,6 @@
 var getUserInitial = function(user) {
   if (!user) {
-    return "<i class=\"fa fa-user\"></i>";
+    return '<i class=\'fa fa-user\'></i>';
   } else if (user.username) {
     return user.username.charAt(0).toUpperCase();
   } else if (user.profile && user.profile.firstName) {
@@ -8,7 +8,7 @@ var getUserInitial = function(user) {
   } else if (user.emails[0].address) {
     return user.emails[0].address.charAt(0).toUpperCase();
   } else {
-    return "<i class=\"fa fa-user\"></i>";
+    return '<i class=\'fa fa-user\'></i>';
   }
 };
 
@@ -26,7 +26,7 @@ Template.profileThumb.helpers({
     var html;
     var user;
 
-    if (typeof Meteor.users !== "undefined") {
+    if (typeof Meteor.users !== 'undefined') {
       user = Meteor.users.findOne({
         _id: _id
       });
@@ -35,7 +35,7 @@ Template.profileThumb.helpers({
 
       return {
         html: html,
-        color: "white",
+        color: 'white',
         backgroundColor: getUserColor(_id)
       };
     }

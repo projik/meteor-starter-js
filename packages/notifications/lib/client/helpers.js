@@ -1,8 +1,8 @@
-Template.registerHelper("Notifications", function(options) {
+Template.registerHelper('Notifications', function(options) {
   var order;
   var limit;
 
-  if (typeof window["Notifications"] !== "undefined") {
+  if (typeof window['Notifications'] !== 'undefined') {
     if (options instanceof Spacebars.kw && options.hash) {
       if (options.hash.limit != null) {
         limit = options.hash.limit;
@@ -29,8 +29,8 @@ Template.registerHelper("Notifications", function(options) {
   }
 });
 
-Template.registerHelper("notificationCount", function() {
-  if (typeof window["Notifications"] !== "undefined") {
+Template.registerHelper('notificationCount', function() {
+  if (typeof window['Notifications'] !== 'undefined') {
     return Notifications.find({
       read: false
     }).count();

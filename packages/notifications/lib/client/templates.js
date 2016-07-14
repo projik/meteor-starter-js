@@ -1,5 +1,5 @@
 var notificationClass = function() {
-  return (!this.read ? "unread-notification" : "");
+  return (!this.read ? 'unread-notification' : '');
 };
 
 var readNotification = function() {
@@ -10,11 +10,11 @@ Template.notificationsDropdown.helpers({
   notificationClass: notificationClass,
 
   dropdownIcon: function() {
-    return (this.icon ? this.icon : "bell");
+    return (this.icon ? this.icon : 'bell');
   },
 
   dropdownIconEmpty: function() {
-    return (this.iconEmpty ? this.iconEmpty : "bell-o");
+    return (this.iconEmpty ? this.iconEmpty : 'bell-o');
   },
 
   hasNotifications: function() {
@@ -23,7 +23,7 @@ Template.notificationsDropdown.helpers({
 });
 
 Template.notificationsDropdown.events({
-  "click .notification": readNotification
+  'click .notification': readNotification
 });
 
 Template.notifications.helpers({
@@ -35,5 +35,5 @@ Template.notifications.helpers({
 });
 
 Template.notifications.events({
-  "click .notification": readNotification
+  'click .notification': readNotification
 });

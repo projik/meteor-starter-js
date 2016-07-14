@@ -1,4 +1,4 @@
-Meteor.publish("notifications", function() {
+Meteor.publish('notifications', function() {
   return Notifications.find({
     owner: this.userId
   });

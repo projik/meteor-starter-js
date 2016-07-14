@@ -1,3 +1,3 @@
 Deps.autorun(function() {
-  return Meteor.subscribe("notifications");
+  return Meteor.subscribe('notifications');
 });

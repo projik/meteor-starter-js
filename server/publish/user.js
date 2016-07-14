@@ -1,4 +1,4 @@
-Meteor.publishComposite("user", function() {
+Meteor.publishComposite('user', function() {
   return {
     find: function() {
       return Meteor.users.find({
